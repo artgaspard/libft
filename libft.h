@@ -6,7 +6,7 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 18:39:34 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/06 13:45:32 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/06 15:27:48 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,14 @@ char		*ft_strncpy(char *dst, const char *src, size_t len);
 
 // FIRST PART / CHAR //
 
-int			ft_atoi(const char *str);
-//int		ft_isalpha(int c);
-//int		ft_isdigit(int c);
-//int		ft_isalnum(int c);
-//int		ft_isascii(int c);
-//int		ft_isprint(int c);
-//int		ft_toupper(int c);
-//int		ft_tolower(int c);
+int		ft_atoi(const char *str);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 /////////////////
 // SECOND PART //
