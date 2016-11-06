@@ -6,14 +6,14 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 18:39:34 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/05 20:46:46 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/06 13:27:45 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <strings.h>
+# include <string.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -43,7 +43,7 @@ typedef struct	s_list
 size_t		ft_strlen(const char *s);
 char		*ft_strdup(const char *s1);
 char		*ft_strcpy(char *dst, const char *src);
-//char		*ft_strncpy(char *dst, const char *src, size_t len);
+char		*ft_strncpy(char *dst, const char *src, size_t len);
 //char		*ft_strcat(char *s1, const char *s2);
 //char		*ft_strncat(char *s1, const char *s2, size_t n);
 //size_t	ft_strlcat(char *dst, const char * src, size_t size);
