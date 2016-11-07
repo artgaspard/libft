@@ -6,7 +6,7 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 15:39:51 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/07 17:28:06 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/07 17:29:54 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,4 @@ int	ft_strcmp(const char *s1, const char *s2)
 	while (*(s1++) == *(s2++) && *s1 && *s2)
 		;
 	return (*s1 - *s2);
-}
-
-int	main()
-{
-	printf("%d", ft_strcmp("abcd", "abcdef"));
-	return (0);
 }
