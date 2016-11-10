@@ -6,7 +6,7 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 11:55:57 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/06 13:26:56 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/10 18:04:31 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,19 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int i;
-	int j;
+	unsigned int i;
 
 	i = 0;
-	j = len;
-	while (src[j] && dst[i])
+	len++;
+	while (--len && src[i])
 	{
-		dst[i] = src[j];
+		dst[i] = src[i];
 		i++;
-		j++;
 	}
-	if (src[j] == '\0' && dst[i] != '\0')
+	while (len--)
 	{
 		dst[i] = '\0';
 		i++;
 	}
-	else if (src[j] == '\0' && dst[i] == '\0')
-	{
-		dst[++i] = '\0';
-		return (dst);
-	}
-	else
-		return (0);
+	return (dst);
 }
