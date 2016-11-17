@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 14:45:28 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/16 17:32:26 by agaspard         ###   ########.fr       */
+/*   Created: 2016/11/15 19:52:38 by agaspard          #+#    #+#             */
+/*   Updated: 2016/11/16 17:37:31 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void					*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char				*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	unsigned int		i;
-	unsigned char		d;
-	unsigned char		*ptrdst;
-	unsigned const char	*ptrsrc;
+	char			*sect;
+	char			*str;
+	unsigned int	i;
 
+	str = (char*)s;
 	i = 0;
-	d = (unsigned char)c;
-	ptrdst = (unsigned char*)dst;
-	ptrsrc = (unsigned const char*)src;
-	while (i < n)
+	if ((sect = (char*)malloc(sizeof(char) * (len + 1))) == 0)
+		return (NULL);
+	while (str != NULL && str[i + start] && len--)
 	{
-		if ((*ptrdst++ = *ptrsrc++) == d)
-			return (ptrdst);
+		sect[i] = str[i + start];
 		i++;
 	}
-	return (NULL);
+	sect[i] = '\0';
+	return (sect);
 }

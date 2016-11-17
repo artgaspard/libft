@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 14:45:28 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/16 17:32:26 by agaspard         ###   ########.fr       */
+/*   Created: 2016/11/12 15:00:23 by agaspard          #+#    #+#             */
+/*   Updated: 2016/11/12 16:58:16 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void					*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int		i;
-	unsigned char		d;
-	unsigned char		*ptrdst;
-	unsigned const char	*ptrsrc;
+	char *ptr;
 
-	i = 0;
-	d = (unsigned char)c;
-	ptrdst = (unsigned char*)dst;
-	ptrsrc = (unsigned const char*)src;
-	while (i < n)
+	ptr = NULL;
+	while (*s)
 	{
-		if ((*ptrdst++ = *ptrsrc++) == d)
-			return (ptrdst);
-		i++;
+		if (*s == (char)c)
+			ptr = (char*)s;
+		s++;
 	}
-	return (NULL);
+	if (*s == (char)c)
+		ptr = (char*)s;
+	return (ptr);
 }

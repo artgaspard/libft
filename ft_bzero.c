@@ -6,7 +6,7 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 13:47:01 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/07 14:07:20 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/09 15:27:23 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
 	while (i < n)

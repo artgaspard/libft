@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 14:45:28 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/16 17:32:26 by agaspard         ###   ########.fr       */
+/*   Created: 2016/11/14 17:41:56 by agaspard          #+#    #+#             */
+/*   Updated: 2016/11/14 18:07:25 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void					*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	unsigned int		i;
-	unsigned char		d;
-	unsigned char		*ptrdst;
-	unsigned const char	*ptrsrc;
+	char *ps1;
+	char *ps2;
 
-	i = 0;
-	d = (unsigned char)c;
-	ptrdst = (unsigned char*)dst;
-	ptrsrc = (unsigned const char*)src;
-	while (i < n)
+	ps1 = (char*)s1;
+	ps2 = (char*)s2;
+	while (*ps1)
+		ps1++;
+	while (*ps2 && n--)
 	{
-		if ((*ptrdst++ = *ptrsrc++) == d)
-			return (ptrdst);
-		i++;
+		*ps1++ = *ps2++;
 	}
-	return (NULL);
+	*ps1 = '\0';
+	return (s1);
 }

@@ -6,7 +6,7 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 16:17:38 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/06 17:06:07 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/16 14:17:58 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_putnbr(int n)
 		nb = -n;
 	}
 	if (nb >= 10)
-		ft_putnbr(n / 10);
-	ft_putchar((n % 10) + '0');
+		ft_putnbr(nb / 10);
+	ft_putchar((nb % 10) + '0');
 }

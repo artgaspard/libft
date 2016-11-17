@@ -6,7 +6,7 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 15:45:39 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/06 16:15:05 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/16 12:48:16 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putstr(char const *s)
 {
-	write(1, s, ft_strlen(s));
+	if (s != NULL)
+		write(1, s, ft_strlen(s));
 }
