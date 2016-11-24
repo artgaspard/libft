@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 13:37:07 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/16 13:41:12 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 16:56:53 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** writes s string on file descriptor
+*/
 
 void	ft_putstr_fd(char const *s, int fd)
 {

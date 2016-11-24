@@ -6,13 +6,31 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 15:29:17 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/16 16:33:14 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/22 17:25:07 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include "libft.h"
 
-size_t	strlcat(char *dst, const char *src, size_t size)
-{
-}
+/*
+ ** append src at the end of dst, at most size - strlen(dst) - 1 bytes
 */
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t i;
+	size_t len;
+
+	i = 0;
+	while (dst[i] && i < size)
+		i++;
+	len = i;
+	while (src[i - len] && i < size - 1)
+	{
+		dst[i] = src[i - len];
+		i++;
+	}
+	if (len < size)
+		dst[i] = '\0';
+	return (len + ft_strlen(src));
+}

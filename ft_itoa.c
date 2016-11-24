@@ -6,13 +6,17 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 14:56:36 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/17 16:23:33 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/22 16:13:55 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_itoa_neg(int *n, int *neg)
+/*
+** int -> char
+*/
+
+static void	ft_itoa_neg(int *n, int *neg)
 {
 	if (*n < 0)
 	{
@@ -26,7 +30,7 @@ char		*ft_itoa(int n)
 	int		tmp;
 	int		len;
 	int		neg;
-	char 	*str;
+	char	*str;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));

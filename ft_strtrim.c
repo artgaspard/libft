@@ -6,13 +6,17 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 11:14:54 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/16 17:42:52 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/24 14:05:18 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_len(char *str)
+/*
+ ** returns a copy of str without white spaces at the beginning and end of str
+*/
+
+static int	ft_len(char *str)
 {
 	int		len;
 
@@ -41,6 +45,8 @@ char		*ft_strtrim(char const *s)
 	char	*dst;
 	char	*str;
 
+	if (!s)
+		return (NULL);
 	str = (char*)s;
 	len = ft_len(str);
 	if ((dst = (char*)malloc(sizeof(char) * (len + 1))) == 0)

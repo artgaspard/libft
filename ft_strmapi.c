@@ -6,11 +6,16 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 18:06:52 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/16 17:35:44 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/22 15:36:04 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** applies f to all characters in s, precising i as first argument, returns
+ ** newmade string
+*/
 
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

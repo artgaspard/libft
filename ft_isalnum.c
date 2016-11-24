@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 14:52:57 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/06 16:50:13 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 15:48:37 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** isalpha + isalnum ; return 0 or 1
+*/
 
 int	ft_isalnum(int c)
 {

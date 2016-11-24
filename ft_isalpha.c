@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 14:00:07 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/06 16:49:34 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 15:49:23 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** isupper + islower ; return 0 or 1
+*/
 
 int	ft_isalpha(int c)
 {

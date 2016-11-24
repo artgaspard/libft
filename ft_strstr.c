@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 17:14:27 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/12 17:23:56 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/22 15:16:19 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** locates first occurence of little in big
+*/
 
 char	*ft_strstr(const char *big, const char *little)
 {

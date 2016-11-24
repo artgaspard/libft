@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 13:33:38 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/15 15:38:57 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 16:03:45 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** allocates new memory space
+*/
 
 void	*ft_memalloc(size_t size)
 {

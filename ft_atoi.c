@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 13:29:53 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/12 18:33:50 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/24 18:41:58 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** char -> int
+*/
 
 int	ft_atoi(const char *str)
 {
@@ -19,7 +23,7 @@ int	ft_atoi(const char *str)
 	int res;
 
 	i = 0;
-	while (str[i] <= 32)
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
 	neg = i;
 	if (str[i] == '+' || str[i] == '-')

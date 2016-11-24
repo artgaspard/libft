@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 11:55:57 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/10 18:04:31 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 17:49:24 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** copies len characters of src in dst, if src < len, fill dst with \0
+*/
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {

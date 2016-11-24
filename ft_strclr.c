@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 15:46:14 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/15 15:52:14 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 17:05:54 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** assign \0 value to all characters in s
+*/
 
 void	ft_strclr(char *s)
 {

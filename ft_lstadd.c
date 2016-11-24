@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: agaspard <agaspard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/05 19:15:05 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/21 17:15:47 by agaspard         ###   ########.fr       */
+/*   Created: 2016/11/19 16:32:13 by agaspard          #+#    #+#             */
+/*   Updated: 2016/11/21 15:53:30 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- ** allocates memory to copy s1, does copy, returns ptr to it
+** add new link to top of the list
 */
 
-char	*ft_strdup(const char *s1)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	char	*dest;
-
-	if ((dest = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1))) == 0)
-		return (NULL);
-	ft_strcpy(dest, s1);
-	return (dest);
+	new->next = *alst;
+	*alst = new;
 }

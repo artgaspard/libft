@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 13:43:41 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/16 14:22:39 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 16:54:20 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** write n integer on file descriptor
+*/
 
 void	ft_putnbr_fd(int n, int fd)
 {

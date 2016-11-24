@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 19:57:18 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/09 12:55:10 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 17:10:16 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** copies src to dst
+*/
 
 char	*ft_strcpy(char *dst, const char *src)
 {

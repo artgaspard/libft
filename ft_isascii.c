@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 14:57:52 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/09 16:23:41 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 15:50:07 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** ascii characters ? ; return 0 or 1
+*/
 
 int	ft_isascii(int c)
 {

@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: agaspard <agaspard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/05 19:15:05 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/21 17:15:47 by agaspard         ###   ########.fr       */
+/*   Created: 2016/11/19 16:48:35 by agaspard          #+#    #+#             */
+/*   Updated: 2016/11/21 15:57:07 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- ** allocates memory to copy s1, does copy, returns ptr to it
+** applies function to all links of the list
 */
 
-char	*ft_strdup(const char *s1)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	char	*dest;
-
-	if ((dest = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1))) == 0)
-		return (NULL);
-	ft_strcpy(dest, s1);
-	return (dest);
+	while (lst)
+	{
+		f(lst);
+		lst = lst->next;
+	}
 }

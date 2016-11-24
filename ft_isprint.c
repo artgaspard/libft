@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 15:03:16 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/06 16:53:06 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 15:51:01 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** printable characters ( > 31) ; return 0 or 1
+*/
 
 int	ft_isprint(int c)
 {

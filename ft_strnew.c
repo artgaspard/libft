@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 14:46:26 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/16 17:36:28 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 17:52:27 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** allocate size bytes to a new string, returns newmade string
+*/
 
 char		*ft_strnew(size_t size)
 {

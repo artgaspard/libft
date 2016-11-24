@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 13:43:26 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/14 17:55:06 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 16:58:44 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** append s2 to the end of s1 + \0
+*/
 
 char	*ft_strcat(char *s1, const char *s2)
 {

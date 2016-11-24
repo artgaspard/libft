@@ -6,11 +6,15 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 18:23:56 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/05 18:49:02 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/21 17:38:24 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ ** returns size of s
+*/
 
 size_t	ft_strlen(const char *s)
 {

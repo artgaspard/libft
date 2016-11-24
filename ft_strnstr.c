@@ -6,30 +6,32 @@
 /*   By: agaspard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 11:38:45 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/12 17:39:05 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/24 18:34:58 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
-{
-	unsigned int i;
+/*
+ ** locates len characters of little in big
+*/
 
-	i = 0;
-	if (*little == '\0')
-		return ((char*)big);
-	while (*big)
+char		*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	char	*large;
+	char	*small;
+	size_t	i;
+
+	large = (char*)big;
+	small = (char*)little;
+	if (*small == '\0')
+		return (large);
+	i = ft_strlen(small);
+	while (*large && len-- >= i)
 	{
-		if (*big == little[i])
-			i++;
-		else
-			i = 0;
-		if (little[i] == '\0' && i != len)
-			return ((char*)(big - i + 1));
-		if (little[i] == '\0' && i == len)
-			return ((char*)little);
-		big++;
+		if (*large == *small && ft_memcmp(large, small, i) == 0)
+			return (large);
+		large++;
 	}
 	return (NULL);
 }
