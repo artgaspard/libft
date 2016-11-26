@@ -6,7 +6,7 @@
 #    By: agaspard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 14:33:41 by agaspard          #+#    #+#              #
-#*   Updated: 2016/11/25 14:27:48 by agaspard         ###   ########.fr       *#
+#*   Updated: 2016/11/26 15:49:22 by agaspard         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,6 +79,9 @@ FLAG = -Wall -Werror -Wextra
 OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
+
+%.o: %.c
+	gcc -o $@ -c $< $(FLAG)
 
 $(NAME) :
 	gcc $(FLAG) -c $(SRC) -I $(ICL)
