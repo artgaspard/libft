@@ -6,7 +6,7 @@
 /*   By: agaspard <agaspard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 16:48:35 by agaspard          #+#    #+#             */
-/*   Updated: 2016/11/21 15:57:07 by agaspard         ###   ########.fr       */
+/*   Updated: 2016/11/27 11:41:51 by agaspard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	while (lst)
+	while (lst && f)
 	{
 		f(lst);
 		lst = lst->next;
