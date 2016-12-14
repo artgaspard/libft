@@ -6,93 +6,133 @@
 #    By: agaspard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 14:33:41 by agaspard          #+#    #+#              #
-#*   Updated: 2016/11/26 15:49:22 by agaspard         ###   ########.fr       *#
+#*   Updated: 2016/12/14 19:23:51 by agaspard         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
+.PHONY: clean $(NAME) re fclean all
+.SILENT:
+
 NAME = libft.a
 
-SRC = ft_atoi.c \
-	  ft_bzero.c \
-	  ft_isalnum.c \
-	  ft_isalpha.c \
-	  ft_isascii.c \
-	  ft_isdigit.c \
-	  ft_isprint.c \
-	  ft_itoa.c \
-	  ft_lstadd.c \
-	  ft_lstdel.c \
-	  ft_lstdelone.c \
-	  ft_lstiter.c \
-	  ft_lstmap.c \
-	  ft_lstnew.c \
-	  ft_memalloc.c \
-	  ft_memccpy.c \
-	  ft_memchr.c \
-	  ft_memcmp.c \
-	  ft_memcpy.c \
-	  ft_memdel.c \
-	  ft_memmove.c \
-	  ft_memset.c \
-	  ft_putchar.c \
-	  ft_putchar_fd.c \
-	  ft_putendl.c \
-	  ft_putendl_fd.c \
-	  ft_putnbr.c \
-	  ft_putnbr_fd.c \
-	  ft_putstr.c \
-	  ft_putstr_fd.c \
-	  ft_strcat.c \
-	  ft_strchr.c \
-	  ft_strclr.c \
-	  ft_strcmp.c \
-	  ft_strcpy.c \
-	  ft_strdel.c \
-	  ft_strdup.c \
-	  ft_strequ.c \
-	  ft_striter.c \
-	  ft_striteri.c \
-	  ft_strjoin.c \
-	  ft_strlcat.c \
-	  ft_strlen.c \
-	  ft_strmap.c \
-	  ft_strmapi.c \
-	  ft_strncat.c \
-	  ft_strncmp.c \
-	  ft_strncpy.c \
-	  ft_strndup.c \
-	  ft_strnequ.c \
-	  ft_strnew.c \
-	  ft_strnstr.c \
-	  ft_strrchr.c \
-	  ft_strsplit.c \
-	  ft_strstr.c \
-	  ft_strsub.c \
-	  ft_strtrim.c \
-	  ft_tolower.c \
-	  ft_toupper.c
+# COMPILATION
 
-ICL = libft.h
+CC = gcc
+FLAGS = -Wall -Wextra -Werror
 
-FLAG = -Wall -Werror -Wextra
+# DIRECTORIES
 
-OBJ = $(SRC:.c=.o)
+SRCDIR = src
+INCDIR = include
+OBJDIR = obj
 
-all : $(NAME)
+# SOURCES
 
-%.o: %.c
-	gcc -o $@ -c $< $(FLAG)
+SRC =\
+		arrays/ft_arraylen.c \
+		numbers/ft_atoi.c \
+		memory/ft_bzero.c \
+		chars/ft_isalnum.c \
+		chars/ft_isalpha.c \
+		chars/ft_isascii.c \
+		chars/ft_isdigit.c \
+		chars/ft_isprint.c \
+		numbers/ft_itoa.c \
+		lst/ft_lstadd.c \
+		lst/ft_lstdel.c \
+		lst/ft_lstdelone.c \
+		lst/ft_lstiter.c \
+		lst/ft_lstmap.c \
+		lst/ft_lstnew.c \
+		memory/ft_memalloc.c \
+		memory/ft_memccpy.c \
+		memory/ft_memchr.c \
+		memory/ft_memcmp.c \
+		memory/ft_memcpy.c \
+		memory/ft_memdel.c \
+		memory/ft_memmove.c \
+		memory/ft_memset.c \
+		chars/ft_putchar.c \
+		chars/ft_putchar_fd.c \
+		strings/ft_putendl.c \
+		strings/ft_putendl_fd.c \
+		numbers/ft_putnbr.c \
+		numbers/ft_putnbr_fd.c \
+		strings/ft_putstr.c \
+		strings/ft_putstr_fd.c \
+		strings/ft_strcat.c \
+		strings/ft_strchr.c \
+		strings/ft_strclr.c \
+		strings/ft_strcmp.c \
+		strings/ft_strcpy.c \
+		strings/ft_strdel.c \
+		strings/ft_strdup.c \
+		strings/ft_strequ.c \
+		strings/ft_striter.c \
+		strings/ft_striteri.c \
+		strings/ft_strjoin.c \
+		strings/ft_strlcat.c \
+		strings/ft_strlen.c \
+		strings/ft_strmap.c \
+		strings/ft_strmapi.c \
+		strings/ft_strncat.c \
+		strings/ft_strncmp.c \
+		strings/ft_strncpy.c \
+		strings/ft_strndup.c \
+		strings/ft_strnequ.c \
+		strings/ft_strnew.c \
+		strings/ft_strnstr.c \
+		strings/ft_strrchr.c \
+		strings/ft_strsplit.c \
+		strings/ft_strstr.c \
+		strings/ft_strsub.c \
+		strings/ft_strtrim.c \
+		chars/ft_tolower.c \
+		chars/ft_toupper.c
 
-$(NAME) :
-	gcc $(FLAG) -c $(SRC) -I $(ICL)
-	ar rc $(NAME) $(OBJ)
+# **************************************************************************** #
 
-clean :
-	/bin/rm -f $(OBJ)
+# SPECIAL CHARS
 
-fclean : clean
-	/bin/rm -f $(NAME)
+LOG_CLEAR		= \033[2K
+LOG_UP 			= \033[A
+LOG_NOCOLOR		= \033[0m
+LOG_BLACK		= \033[1;30m
+LOG_RED			= \033[1;31m
+LOG_GREEN		= \033[1;32m
+LOG_YELLOW		= \033[1;33m
+LOG_BLUE		= \033[1;34m
+LOG_VIOLET		= \033[1;35m
+LOG_CYAN		= \033[1;36m
+LOG_WHITE		= \033[1;37m
 
-re : fclean all
+# **************************************************************************** #
 
-.PHONY : clean re fclean all
+SRCS = $(addprefix $(SRCDIR)/, $(SRC))
+OBJS = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(basename $(SRC))))
+OBJS_DIRS = $(sort $(dir $(OBJS)))
+
+INCS_DIRS = $(addsuffix /, $(INCDIR))
+INCS = $(addprefix -I , $(INCS_DIRS))
+
+all: $(NAME)
+
+$(NAME): build $(LIBS) $(OBJS)
+	echo "$(LOG_CLEAR)$(NAME)... $(LOG_CYAN)assembling...$(LOG_NOCOLOR)$(LOG_UP)"
+	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
+	echo "$(LOG_CLEAR)$(NAME)... $(LOG_GREEN)compiled $(LOG_GREEN)✓$(LOG_NOCOLOR)"
+build:
+	mkdir -p $(OBJDIR)
+	mkdir -p $(OBJS_DIRS)
+clean:
+	rm -f $(LIBS)
+	rm -Rf $(OBJS_DIRS)
+	rm -Rf $(OBJDIR)
+fclean: clean
+	rm -f $(NAME)
+re: fclean all
+
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	echo "$(LOG_CLEAR)$(NAME)... $(LOG_YELLOW)$<$(LOG_NOCOLOR)$(LOG_UP)"
+	$(CC) -c -o $@ $< $(INCS) $(FLAGS)
